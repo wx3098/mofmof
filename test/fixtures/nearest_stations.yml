@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  route_name: MyString
+  station_name: MyString
+  foot: 1
+
+two:
+  route_name: MyString
+  station_name: MyString
+  foot: 1
