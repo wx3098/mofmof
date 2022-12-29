@@ -7,7 +7,7 @@ class PropertiesController < ApplicationController
 
   def new
     @property = Property.new
-    @property.nearest_stations.build
+    2.times{ @property.nearest_stations.build }
   end
 
   def create
@@ -15,7 +15,7 @@ class PropertiesController < ApplicationController
    if @property.save
     redirect_to properties_path, notice: "作成しました"
    else
-    @property.nearest_stations.build
+    2.times{ @property.nearest_stations.build }
     render :new
    end
   end

@@ -26,9 +26,8 @@
  <hr>
 
  <%= form.fields_for :nearest_stations do |nearest_station| %>
- <% i = 0 %>
- <h3>
-  最寄り駅<%= i += 1 %>
+  <h3>
+  最寄り駅<%= nearest_station.index + 1 %>
  </h3>
    <%= nearest_station.label '路線名' %><br>
    <%= nearest_station.text_field :route_name %><br>

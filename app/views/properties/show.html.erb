@@ -1,21 +1,23 @@
 
-<p>タイトル: <%= @property.property_name %></p>
-<p>内容: <%= @property.rent %></p>
-<p>内容: <%= @property.address %></p>
-<p>内容: <%= @property.age %></p>
-<p>内容: <%= @property.note %></p>
+<p>物件名: <%= @property.property_name %></p>
+<p>賃料: <%= @property.rent %></p>
+<p>住所: <%= @property.address %></p>
+<p>築年数: <%= @property.age %></p>
+<p>備考: <%= @property.note %></p>
 
 <hr>
-
+<% i = 0 %>
 <% @nearest_stations.each do |nearest_station| %>
+<% if @property.nearest_stations.any? %>
 <h3>
-最寄り駅
+最寄り駅<%= i += 1 %>
   <p>路線名: <%= nearest_station.route_name %>
   <p>駅名: <%= nearest_station.station_name %>
   <p>徒歩: <%= nearest_station.foot %>分<br><br>
 </tr>
 
-<% end %>
+  <% end %>
+<% end%>
 
 <%= link_to '編集', edit_property_path(@property.id) %>
 <%= link_to '戻る', properties_path %>
