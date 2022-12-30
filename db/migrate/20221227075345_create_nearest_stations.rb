@@ -5,7 +5,7 @@ class CreateNearestStations < ActiveRecord::Migration[6.0]
       t.string :station_name
       t.integer :foot
 
-      t.timestamps :nearest_stations, :
+      t.timestamps
     end
   end
 end
